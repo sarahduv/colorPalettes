@@ -20,5 +20,6 @@ class ColorBox extends Component {
     );
   }
 }
+// here
 
 export default ColorBox;
