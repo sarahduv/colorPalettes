@@ -30,7 +30,6 @@ class Palette extends Component {
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
         />
-        {/* navbar goes here */}
         <div className="Palette-colors">{colorBoxes}</div>
         {/* footer goes here  */}
       </div>

@@ -17,7 +17,7 @@ class NavBar extends Component {
     this.props.handleChange(e.target.value);
   }
   render() {
-    const { level, changeLevel, handleChange } = this.props;
+    const { level, changeLevel } = this.props;
     const { format } = this.state;
     return (
       <header className="navBar">
@@ -37,7 +37,7 @@ class NavBar extends Component {
           </div>
         </div>
         <div className="select-container">
-          <Select value={this.state.format} onChange={this.handleChange}>
+          <Select value={format} onChange={this.handleChange}>
             <MenuItem value="hex">HEX - #ffffff</MenuItem>
             <MenuItem value="hex">rgb - 255,255,255</MenuItem>
             <MenuItem value="hex">rgba - 255,255,255, 1.0</MenuItem>
