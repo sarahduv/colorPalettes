@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ColorBox from './colorBox.js';
-import NavBar from './navBar.js';
+import ColorBox from './colorBox';
+import Navbar from './navBar';
 import './palette.css';
 
 class Palette extends Component {
@@ -13,7 +13,6 @@ class Palette extends Component {
   changeLevel(level) {
     this.setState({ level });
   }
-
   changeFormat(val) {
     this.setState({ format: val });
   }
@@ -25,16 +24,16 @@ class Palette extends Component {
     ));
     return (
       <div className="Palette">
-        <NavBar
+        <Navbar
           level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
         />
+        {/* Navbar goes here */}
         <div className="Palette-colors">{colorBoxes}</div>
-        {/* footer goes here  */}
+        {/* footer eventually */}
       </div>
     );
   }
 }
-
 export default Palette;
