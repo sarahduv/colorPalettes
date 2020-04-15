@@ -16,5 +16,4 @@ class PaletteList extends Component {
     );
   }
 }
-
 export default PaletteList;
