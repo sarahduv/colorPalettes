@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Palette from './palette.js';
-import PaletteList from './paletteList.js';
+import Palette from './palette';
+import PaletteList from './paletteList';
+import SingleColorPalette from './singleColorPalette';
 import seedColors from './seedColors';
-import { generatePalette } from './colorHelpers.js';
+import { generatePalette } from './colorHelpers';
 
 class App extends Component {
   findPalette(id) {
@@ -14,6 +15,11 @@ class App extends Component {
   render() {
     return (
       <Switch>
+        <Route
+          exact
+          path="/palette/:paletteId/:colorId"
+          render={() => <SingleColorPalette />}
+        />
         <Route
           exact
           path="/"
@@ -32,16 +38,7 @@ class App extends Component {
             />
           )}
         />
-        <Route
-          exact
-          path="/palette/:paletteId/:colorId"
-          render={() => <h1>SINGLE COLOR PAGE!</h1>}
-        />
       </Switch>
-
-      // <div>
-      //   <Palette palette={generatePalette(seedColors[4])} />
-      // </div>
     );
   }
 }
