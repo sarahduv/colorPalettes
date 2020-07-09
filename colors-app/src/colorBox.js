@@ -15,6 +15,7 @@ class ColorBox extends Component {
       setTimeout(() => this.setState({ copied: false }), 1500);
     });
   }
+
   render() {
     const {
       name,
@@ -24,6 +25,7 @@ class ColorBox extends Component {
       classes,
     } = this.props;
     const { copied } = this.state;
+
     return (
       <CopyToClipboard text={background} onCopy={this.changeCopyState}>
         <div style={{ background }} className={classes.ColorBox}>
